@@ -86,6 +86,24 @@ _DATASETS = {
         _ANN_FN:
             _DATA_DIR + '/coco/annotations/instances_valminusminival2014.json'
     },
+    'medline_train': {
+        _IM_DIR:
+            _DATA_DIR + '/medline/train',
+        _ANN_FN:
+            _DATA_DIR + '/medline/annotations/train.json'
+    },
+    'medline_val': {
+        _IM_DIR:
+            _DATA_DIR + '/medline/dev',
+        _ANN_FN:
+            _DATA_DIR + '/medline/annotations/dev.json'
+    },
+    'medline_test': {
+        _IM_DIR:
+            _DATA_DIR + '/medline/test',
+        _ANN_FN:
+            _DATA_DIR + '/medline/annotations/test.json'
+    },
     'coco_2015_test': {
         _IM_DIR:
             _DATA_DIR + '/coco/coco_test2015',
