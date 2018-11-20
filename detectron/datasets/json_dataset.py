@@ -45,6 +45,8 @@ import detectron.utils.boxes as box_utils
 from detectron.utils.io import load_object
 import detectron.utils.segms as segm_utils
 
+from tqdm import tqdm
+
 logger = logging.getLogger(__name__)
 
 
@@ -100,7 +102,7 @@ class JsonDataset(object):
         image_ids = self.COCO.getImgIds()
         image_ids.sort()
         roidb = copy.deepcopy(self.COCO.loadImgs(image_ids))
-        for entry in roidb:
+        for entry in tqdm(roidb):
             self._prep_roidb_entry(entry)
         if gt:
             # Include ground-truth object annotations
